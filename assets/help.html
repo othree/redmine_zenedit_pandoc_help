@@ -1,5 +1,5 @@
-<div id="pandoc-quick-help">
-  
+<div class="help-box" id="pandoc-quick-help">
+
   <nav id="pandoc-quick-help-nav">
     <a href="#pandoc-quick-help-structure">文章架構</a>
     <a href="#pandoc-quick-help-link">連結/圖片</a>
@@ -13,13 +13,26 @@
   <div class="content" id="pandoc-quick-help-content">
     <section id="pandoc-quick-help-structure">
       <h4>文章架構</h4>
-      <h5>標題</h5>
+      <h5>Setext 風格標題</h5>
+      <p>Setext 風格的標題是由一行文字底下接著一行 = 符號（用於一階標題）或 - 符號（用於二階標題）所構成：</p>
+      <pre><code>A level-one header
+==================
+
+A level-two header
+------------------</code></pre>
+      <h5>Atx 風格標題</h5>
       <p>標題是由一到六個 # 符號以及一行文字所組成，你可以在文字後面加上任意數量的 # 符號。由行首起算的 # 符號數量決定了標題的階層：</p>
       <pre><code>## A level-two header
 
 ### A level-three header ###</code></pre>
       <h5>段落</h5>
-      <p>一個段落指的是一行以上的文字，跟在一行以上的空白行之後。換行字元會被當作是空白處理，因此你可以依自己喜好排列段落文字。如果你需要強制換行，在行尾放上兩個以上的空白字元即可。</p>
+      <p>一個段落指的是一行以上的文字，跟在一行以上的空白行之後。換行字元會被當作是空白處理，因此你可以依自己喜好排列段落文字。</p>
+      <pre><code>段落一
+段落一
+段落一
+
+段落二</code></pre>
+      <p>如果你需要強制換行，在行尾放上兩個以上的空白字元即可。</p>
     </section>
     <section id="pandoc-quick-help-link">
       <h4>連結/圖片</h4>
@@ -41,6 +54,13 @@ a title](http://fsf.org "click here for a good time!").</code></pre>
       <pre><code>See [my website][], or [my website].
 
 [my website]: http://foo.bar.baz</code></pre>
+      <h5>圖片</h5>
+      <p>在連結語法的前面加上一個 ! 就是圖片的語法了。連結文字將會作為圖片的替代文字：</p>
+      <pre><code>![la lune](lalune.jpg "Voyage to the moon")
+
+![movie reel]
+
+[movie reel]: movie.gif</code></pre>
     </section>
     <section id="pandoc-quick-help-codeblock">
       <h4>程式碼/引言</h4>
